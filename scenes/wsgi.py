@@ -9,9 +9,6 @@ https://docs.djangoproject.com/en/1.10/howto/deployment/wsgi/
 
 import os, sys
 
-path = '/home/richard/workspace/scenes'
-if path not in sys.path:
-    sys.path.append(path)
 
 from django.core.wsgi import get_wsgi_application
 
