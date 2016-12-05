@@ -5,6 +5,6 @@ class DirectionHandler:
         self.log = {}
 
     def getDirections(self, name):
-        # directions = ['North', 'West', 'South', 'East', 'North-West']
-        location = Location.objects.get(name=name)
-        return location.directions
+        directions = Direction.objects.filter(source_location__name=name)
+        direction_names = names = map(lambda direction: direction.name, directions)
+        return direction_names

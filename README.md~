@@ -27,9 +27,3 @@ docker exec -it <ID> bash
 ```
 python manage.py createsuperuser
 ```
-
-### Start thrift service
-```
-python manage.py location_service
-```
-
