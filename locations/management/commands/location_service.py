@@ -19,6 +19,6 @@ class Command(BaseCommand):
         pfactory = TBinaryProtocol.TBinaryProtocolFactory()
 
         server = TServer.TSimpleServer(processor, transport, tfactory, pfactory)
-        print("Starting python server...")
+        print("Starting python socket server...")
         server.serve()
         print("done!")

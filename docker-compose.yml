@@ -4,7 +4,9 @@ services:
     image: imiell/sqlite
   web:
     build: .
-    command: python manage.py runserver 0.0.0.0:8000
+ #   command: python manage.py location_service
+    command: bash -c "python manage.py runserver 0.0.0.0:8000 & python manage.py location_service"
+ #   command: bash -c "python manage.py runserver 0.0.0.0:8000"
     volumes:
       - .:/code
     ports:
@@ -12,3 +14,4 @@ services:
       - "9090:9090"
     depends_on:
       - db
+
