@@ -5,3 +5,6 @@ WORKDIR /code
 ADD requirements.txt /code/
 RUN pip install -r requirements.txt
 ADD . /code/
+EXPOSE 9090
+EXPOSE 8000
+CMD bash -c "python manage.py runserver 0.0.0.0:8000 & python manage.py location_service"
